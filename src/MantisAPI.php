@@ -38,7 +38,7 @@ class MantisAPI
             $responseArr['error'] = 'Not valid JSON';
             $responseArr['data'] = $response;
         }
-        return $responseArr;
+        return (array) $responseArr;
     }
     private function isJson($string)
     {
