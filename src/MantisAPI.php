@@ -25,8 +25,8 @@ class MantisAPI
             CURLOPT_CUSTOMREQUEST => $method,
             CURLOPT_POSTFIELDS => $data,
             CURLOPT_HTTPHEADER => array(
-                'Authorization=> ' . $this->access_token,
-                'Cookie=> MANTIS_PROJECT_COOKIE=0'
+                'Authorization: ' . $this->access_token,
+                'Cookie: MANTIS_PROJECT_COOKIE=0'
             ),
         ));
 
@@ -45,7 +45,7 @@ class MantisAPI
         json_decode($string);
         return (json_last_error() == JSON_ERROR_NONE);
     }
-    public function getIssues($page_size=10, $page=1)
+    public function getIssues($page_size = 10, $page = 1)
     {
         return $this->callAPI('issues?page_size=' . $page_size . '&page=' . $page, 'GET');
     }
