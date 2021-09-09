@@ -124,6 +124,6 @@ class MantisAPI
     }
     public function addIssueRelationship($issue_id, $data)
     {
-        return $this->callAPI('issues/' . $issue_id . '/relationships/', 'POST');
+        return $this->callAPI('issues/' . $issue_id . '/relationships/', 'POST', $data);
     }
 }
