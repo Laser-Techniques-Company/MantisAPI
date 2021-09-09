@@ -26,7 +26,8 @@ class MantisAPI
             CURLOPT_POSTFIELDS => json_encode($data),
             CURLOPT_HTTPHEADER => array(
                 'Authorization: ' . $this->access_token,
-                'Cookie: MANTIS_PROJECT_COOKIE=0'
+                'Cookie: MANTIS_PROJECT_COOKIE=0',
+                'Content-Type: application/json'
             ),
         ));
 
