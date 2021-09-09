@@ -11,6 +11,8 @@ $api = new MantisAPI('http://localhost/mantisbt', 'YOUR_API_KEY_HERE');
 
 Examples: See [/examples/](examples/)
 
+API Documentation: [View on Postman](https://documenter.getpostman.com/view/29959/mantis-bug-tracker-rest-api/7Lt6zkP)
+
 
 List of functions currently supported:
 
