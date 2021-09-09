@@ -23,7 +23,7 @@ class MantisAPI
             CURLOPT_FOLLOWLOCATION => true,
             CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
             CURLOPT_CUSTOMREQUEST => $method,
-            CURLOPT_POSTFIELDS => $data,
+            CURLOPT_POSTFIELDS => json_encode($data),
             CURLOPT_HTTPHEADER => array(
                 'Authorization: ' . $this->access_token,
                 'Cookie: MANTIS_PROJECT_COOKIE=0'
